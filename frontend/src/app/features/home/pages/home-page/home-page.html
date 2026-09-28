@@ -1,0 +1,365 @@
+<div class="min-h-screen bg-slate-950 text-white">
+
+  <!-- Navigation -->
+  <header class="border-b border-slate-800">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+
+      <a routerLink="/" class="text-xl font-semibold tracking-tight">
+        HQ<span class="text-blue-400">Board</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm text-slate-400 md:flex">
+        <a href="#platform" class="transition hover:text-white">
+          Platform
+        </a>
+
+        <a href="#architecture" class="transition hover:text-white">
+          Architecture
+        </a>
+
+        <a href="#ai" class="transition hover:text-white">
+          AI
+        </a>
+
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition hover:text-white"
+        >
+          GitHub
+        </a>
+      </nav>
+
+      <a
+        routerLink="/dashboard"
+        class="rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-slate-200"
+      >
+        Open HQBoard
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <main>
+
+    <section class="mx-auto grid max-w-7xl items-center gap-16 px-6 py-24 lg:grid-cols-2">
+
+      <div>
+
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs text-slate-400">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          Engineering Operations Platform
+        </div>
+
+        <h1 class="max-w-3xl text-5xl font-bold leading-tight tracking-tight md:text-6xl">
+          Your company.
+          <br />
+          One
+          <span class="text-blue-400"> command center.</span>
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+          HQBoard connects projects, tasks, people, services,
+          deployments and incidents into a single operational view
+          of your engineering organization.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+
+          <a
+            routerLink="/dashboard"
+            class="rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium transition hover:bg-blue-400"
+          >
+            Open Command Center
+          </a>
+
+          <a
+            href="#architecture"
+            class="rounded-lg border border-slate-700 px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-slate-500 hover:text-white"
+          >
+            Explore Architecture
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product preview -->
+      <div class="relative">
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-2xl">
+
+          <div class="mb-5 flex items-center justify-between">
+
+            <div>
+              <p class="text-xs text-slate-500">
+                PROJECT
+              </p>
+
+              <h2 class="mt-1 text-lg font-semibold">
+                HQBoard
+              </h2>
+            </div>
+
+            <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs text-emerald-400">
+              Healthy
+            </span>
+
+          </div>
+
+
+          <div class="grid grid-cols-2 gap-3">
+
+            <div class="rounded-lg bg-slate-950 p-4">
+              <p class="text-xs text-slate-500">
+                Tasks
+              </p>
+              <p class="mt-2 text-2xl font-semibold">
+                24
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-slate-950 p-4">
+              <p class="text-xs text-slate-500">
+                Services
+              </p>
+              <p class="mt-2 text-2xl font-semibold">
+                8
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-slate-950 p-4">
+              <p class="text-xs text-slate-500">
+                Deployments
+              </p>
+              <p class="mt-2 text-2xl font-semibold">
+                12
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-slate-950 p-4">
+              <p class="text-xs text-slate-500">
+                Incidents
+              </p>
+              <p class="mt-2 text-2xl font-semibold">
+                1
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Platform -->
+    <section id="platform" class="border-t border-slate-800">
+
+      <div class="mx-auto max-w-7xl px-6 py-24">
+
+        <div class="max-w-2xl">
+
+          <p class="text-sm font-medium text-blue-400">
+            ONE PLATFORM
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            Everything connected.
+          </h2>
+
+          <p class="mt-4 text-slate-400">
+            HQBoard brings the most important parts of your
+            engineering environment into one operational picture.
+          </p>
+
+        </div>
+
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="font-semibold">Projects</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Understand the current state of every project.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="font-semibold">Tasks</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Track work, ownership, dependencies and progress.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="font-semibold">People</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              See who is working on what and where attention is needed.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="font-semibold">Services</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Monitor the health of the services behind your projects.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="font-semibold">Deployments</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Connect development activity with releases and deployments.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+            <h3 class="font-semibold">Incidents</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Understand operational problems and their context.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Architecture -->
+    <section id="architecture" class="border-t border-slate-800">
+
+      <div class="mx-auto max-w-7xl px-6 py-24">
+
+        <div class="text-center">
+
+          <p class="text-sm font-medium text-blue-400">
+            ENGINEERING CONTEXT
+          </p>
+
+          <h2 class="mt-3 text-3xl font-bold">
+            From task to incident.
+          </h2>
+
+          <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+            HQBoard connects engineering events so you can understand
+            how work moves through your systems.
+          </p>
+
+        </div>
+
+
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-3 text-sm">
+
+          <span class="rounded-lg border border-slate-700 bg-slate-900 px-5 py-3">
+            Task
+          </span>
+
+          <span class="text-slate-600">→</span>
+
+          <span class="rounded-lg border border-slate-700 bg-slate-900 px-5 py-3">
+            Pull Request
+          </span>
+
+          <span class="text-slate-600">→</span>
+
+          <span class="rounded-lg border border-slate-700 bg-slate-900 px-5 py-3">
+            Deployment
+          </span>
+
+          <span class="text-slate-600">→</span>
+
+          <span class="rounded-lg border border-slate-700 bg-slate-900 px-5 py-3">
+            Service
+          </span>
+
+          <span class="text-slate-600">→</span>
+
+          <span class="rounded-lg border border-slate-700 bg-slate-900 px-5 py-3">
+            Incident
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI -->
+    <section id="ai" class="border-t border-slate-800">
+
+      <div class="mx-auto max-w-7xl px-6 py-24">
+
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+          <div>
+
+            <p class="text-sm font-medium text-purple-400">
+              AI INSIGHTS
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold">
+              Turn engineering data into context.
+            </h2>
+
+            <p class="mt-4 leading-7 text-slate-400">
+              HQBoard can analyze project activity, tasks, deployments,
+              incidents and service health to surface risks and useful
+              engineering context.
+            </p>
+
+          </div>
+
+
+          <div class="rounded-xl border border-slate-800 bg-slate-900 p-6">
+
+            <div class="text-sm text-slate-500">
+              AI INSIGHT
+            </div>
+
+            <p class="mt-4 text-slate-200">
+              Deployment failures have increased after the latest release.
+            </p>
+
+            <p class="mt-3 text-sm leading-6 text-slate-400">
+              Related incidents and recent service degradation were
+              detected in the same period.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800">
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+
+      <span>
+        HQBoard — Engineering Command Center
+      </span>
+
+      <span>
+        Built with Angular · Spring Boot · PostgreSQL
+      </span>
+
+    </div>
+
+  </footer>
+
+</div>
