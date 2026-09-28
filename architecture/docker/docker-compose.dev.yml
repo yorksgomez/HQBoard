@@ -1,0 +1,78 @@
+services:
+
+  gateway:
+    build:
+      context: ../../gateway
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ../../gateway:/app
+      - ~/.m2:/root/.m2
+
+    depends_on:
+      - project-service
+
+  project-service:
+    build:
+      context: ../../project-service
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "8081:8081"
+
+    volumes:
+      - ../../project-service:/app
+      - ~/.m2:/root/.m2
+
+    environment:
+      SERVER_PORT: 8081
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-project:5432/projects
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+    depends_on:
+      postgres-project:
+        condition: service_healthy
+
+  postgres-project:
+    image: postgres:17
+
+    environment:
+      POSTGRES_DB: projects
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    volumes:
+      - postgres-project-data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U postgres -d projects"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  frontend:
+    build:
+      context: ../../frontend
+      dockerfile: Dockerfile.dev
+    container_name: hqboard-frontend
+    ports:
+      - "4200:4200"
+    volumes:
+      - ../../frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start -- --host 0.0.0.0
+    depends_on:
+      - gateway
+
+volumes:
+  postgres-project-data:
